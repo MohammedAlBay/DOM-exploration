@@ -27,7 +27,7 @@ const paragraphElements = document.querySelectorAll("p");
 paragraphElements.forEach(element => {
   console.log(element.innerText);
   if (element.hasAttribute("class")) {
-    console.log(element);
+    console.log(element.className);
   }
   else {
     element.style.color = getRandomColor();
