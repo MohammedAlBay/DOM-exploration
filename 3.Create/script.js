@@ -29,4 +29,16 @@ let Luminance = 0.2126 * (red / 255) + 0.7152 * (green / 255) + 0.0722 * (blue /
   } else {
     pElement.style.color = "white";
   }
+
+// TODO: Find a way so that everytime you load the page the order of the elements changes!
+shuffleArray(learners);  // calling Durstenfeld shuffle function into learners array
+
 });
+
+// Durstenfeld shuffle function codesnippet
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
