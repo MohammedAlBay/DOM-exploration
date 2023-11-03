@@ -12,4 +12,10 @@ learners.forEach(element => {
   
   sectionElement.style.backgroundColor = bgColor;
   console.log(sectionElement);
+// TODO: This section should contain a paragraph with the name of the learner.
+const pElement = document.createElement("p");
+let pTextNode = document.createTextNode(element);
+
+pElement.appendChild(pTextNode);
+sectionElement.append(pElement);
 });
