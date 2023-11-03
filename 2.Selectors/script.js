@@ -16,11 +16,28 @@ for(const img of imgCollection){
   }
 }
 
+/* TODO: 
+- Loop through all the paragraphs and display their content in the console.
+- If the paragraph has a class, display its classname as well.
+- Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.
+*/
 
-/* TODO: Loop through all the paragraphs and display their content in the console.
-If the paragraph has a class, display its classname as well.*/
+const paragraphElements = document.querySelectorAll("p");
 
+paragraphElements.forEach(element => {
+  console.log(element.innerText);
+  if (element.hasAttribute("class")) {
+    console.log(element);
+  }
+  else {
+    element.style.color = getRandomColor();
+  }
+});
 
-
-
-// TODO: Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.
+// function for random text color
+function getRandomColor() {
+  let r = Math.floor(Math.random()*256);
+  let g = Math.floor(Math.random()*256);
+  let b = Math.floor(Math.random()*256);
+  return "rgb(" + r + "," + g + "," + b + ")";
+}
