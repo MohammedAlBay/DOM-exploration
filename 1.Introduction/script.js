@@ -22,8 +22,3 @@ document.body.style.backgroundColor = RandomBgColor; // Not showing any random b
 // TODO: Using the children method, display all children elements of the <body>
 const bodyChildren = document.body.children;
 console.log(bodyChildren);
-
-// TODO: Using a For...of loop, display all children elements of the <body>
-for (const child of body.children){
-  console.log(child);
-};
