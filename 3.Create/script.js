@@ -18,4 +18,6 @@ let pTextNode = document.createTextNode(element);
 
 pElement.appendChild(pTextNode);
 sectionElement.append(pElement);
+// TODO: Those sections should be appended in the <article>.
+article.append(sectionElement);
 });
