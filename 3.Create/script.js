@@ -20,4 +20,13 @@ pElement.appendChild(pTextNode);
 sectionElement.append(pElement);
 // TODO: Those sections should be appended in the <article>.
 article.append(sectionElement);
+// TODO: Define relative Luminance: > 0.5 = light, < 0.5 = dark
+let Luminance = 0.2126 * (red / 255) + 0.7152 * (green / 255) + 0.0722 * (blue / 255)
+
+// TODO: If the background is dark the text should be white, if the background is light the text should be black.
+  if (Luminance >= 0.5) {
+    pElement.style.color = "black";
+  } else {
+    pElement.style.color = "white";
+  }
 });
