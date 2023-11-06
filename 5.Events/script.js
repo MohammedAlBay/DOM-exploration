@@ -12,6 +12,13 @@ const clickOnSquare = (e) => {
   const newSquareDiv = document.createElement("div");
   newSquareDiv.classList.add("displayedsquare");
 
+// TODO: Add the corresponding clicked color to the new div
+newSquareDiv.classList.add(e.target.classList[1]);
+
+// TODO: Add the new div in the wrapper div with class '.displayedsquare-wrapper'
+  const wrapperDiv = document.querySelector(".displayedsquare-wrapper");
+  wrapperDiv.appendChild(newSquareDiv);
+
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
