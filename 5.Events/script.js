@@ -4,6 +4,11 @@ const getElapsedTime = () => {
   return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
 }
 
+// TODO: Create a system so that when a user clicks on a generated square an alert pops-up with the color of that square
+const clickOnDisplayedSquare = (e) => {
+  console.log(alert(e.target.classList[1]));
+}
+
 const clickOnSquare = (e) => {
   console.log(e.target.classList[1])
   console.log(getElapsedTime())
@@ -11,6 +16,7 @@ const clickOnSquare = (e) => {
 // TODO: Create a new `<div>` with a class `.displayedsquare`
   const newSquareDiv = document.createElement("div");
   newSquareDiv.classList.add("displayedsquare");
+  newSquareDiv.addEventListener('click', clickOnDisplayedSquare);
 
 // TODO: Add the corresponding clicked color to the new div
 newSquareDiv.classList.add(e.target.classList[1]);
@@ -27,11 +33,9 @@ newListItem.appendChild(text);
 // TODO: Add the new li in the ul to show te log
 const logList = document.querySelector("ul");
 logList.appendChild(newListItem);
-
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
 for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 }
-
