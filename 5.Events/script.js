@@ -21,11 +21,11 @@ wrapperDiv.appendChild(newSquareDiv);
 
 // TODO: Create a new <li> in the log below to state when the action was done
 const newListItem = document.createElement("li");
-let text = document.createTextNode("[" + getElapsedTime() + "]" + " Created a new" + e.target.classList[1] + "square.");
+let text = document.createTextNode("[" + getElapsedTime() + "]" + " Created a new " + e.target.classList[1] + "square.");
 newListItem.appendChild(text);
 
 // TODO: Add the new li in the ul to show te log
-const logList = document.querySelector("ol");
+const logList = document.querySelector("ul");
 logList.appendChild(newListItem);
 
 }
