@@ -19,6 +19,12 @@ newSquareDiv.classList.add(e.target.classList[1]);
 const wrapperDiv = document.querySelector(".displayedsquare-wrapper");
 wrapperDiv.appendChild(newSquareDiv);
 
+// TODO: Create a new <li> in the log below to state when the action was done
+const newListItem = document.createElement("li");
+let text = document.createTextNode("[" + getElapsedTime() + "]" + " Created a new" + e.target.classList[1] + "square.");
+newListItem.appendChild(text);
+
+
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
