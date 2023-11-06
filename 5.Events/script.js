@@ -24,6 +24,9 @@ const newListItem = document.createElement("li");
 let text = document.createTextNode("[" + getElapsedTime() + "]" + " Created a new" + e.target.classList[1] + "square.");
 newListItem.appendChild(text);
 
+// TODO: Add the new li in the ul to show te log
+const logList = document.querySelector("ol");
+logList.appendChild(newListItem);
 
 }
 
