@@ -7,6 +7,11 @@ const getElapsedTime = () => {
 const clickOnSquare = (e) => {
   console.log(e.target.classList[1])
   console.log(getElapsedTime())
+
+// TODO: Create a new `<div>` with a class `.displayedsquare`
+  const newSquareDiv = document.createElement("div");
+  newSquareDiv.classList.add("displayedsquare");
+
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
