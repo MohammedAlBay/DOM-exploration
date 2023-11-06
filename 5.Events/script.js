@@ -16,8 +16,8 @@ const clickOnSquare = (e) => {
 newSquareDiv.classList.add(e.target.classList[1]);
 
 // TODO: Add the new div in the wrapper div with class '.displayedsquare-wrapper'
-  const wrapperDiv = document.querySelector(".displayedsquare-wrapper");
-  wrapperDiv.appendChild(newSquareDiv);
+const wrapperDiv = document.querySelector(".displayedsquare-wrapper");
+wrapperDiv.appendChild(newSquareDiv);
 
 }
 
